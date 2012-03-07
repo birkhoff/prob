@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/de.prob.feature_1.0.0.qualifier.jar" id="de.prob.feature" version="1.0.0.qualifier">
+      <category name="de.prob.category"/>
+   </feature>
+   <category-def name="de.prob.category" label="Prob Category">
+      <description>
+         Prob Category
+      </description>
+   </category-def>
+</site>

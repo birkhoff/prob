@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>de.prob.parent</name>
+	<comment></comment>
+	<projects>
+		<project>de.bmotionstudio.gef.editor</project>
+		<project>de.bmotionstudio.rodin</project>
+		<project>de.prob.core</project>
+		<project>de.prob.plugin</project>
+		<project>de.prob.ui</project>
+		<project>de.prob.update_site</project>
+		<project>de.prob2.feature</project>
+	</projects>
+	<buildSpec>
+	</buildSpec>
+	<natures>
+	</natures>
+</projectDescription>
