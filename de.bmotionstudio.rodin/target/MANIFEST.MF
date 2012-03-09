@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Require-Bundle: org.eclipse.ui.navigator;bundle-version="3.5.0"
+Bundle-Vendor: HHU Düsseldorf STUPS Group
+Fragment-Host: de.bmotionstudio.gef.editor;bundle-version="1.0.0"
+Bundle-Version: 1.0.0.201203070756
+Bundle-Name: BMotion Studio Rodin Integration
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: de.bmotionstudio.rodin;singleton:=true
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+

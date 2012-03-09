@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Bundle-Vendor: HHU Düsseldorf STUPS Group
+Fragment-Host: de.prob.ui;bundle-version="[1.0.0,7.3.0)"
+Bundle-Version: 1.0.0.201203070756
+Bundle-Name: ProB Rodin2 UI Bindings
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: de.prob.plugin;singleton:=true
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+
