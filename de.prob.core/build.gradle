@@ -1,0 +1,13 @@
+
+deploy <<{
+
+	versionNumber = '1.0.0.qualifier'
+	artifactId = 'de.prob.core'
+	
+	println artifactId
+
+	def f = new File(artifactId+'/pom.xml') 
+	f.delete()
+	f << start()+elder()+repos()+artifact(artifactId, versionNumber)+end()
+	
+}

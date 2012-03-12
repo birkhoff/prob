@@ -1,0 +1,12 @@
+deploy <<{
+
+	versionNumber = '1.0.0.qualifier'
+	artifactId = 'de.bmotionstudio.gef.editor'
+	
+	println artifactId
+
+	def f = new File(artifactId+'/pom.xml') 
+	f.delete()
+	f << start()+elder()+repos()+artifact(artifactId, versionNumber)+end()
+	
+}
