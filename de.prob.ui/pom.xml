@@ -1,35 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
-	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-	<modelVersion>4.0.0</modelVersion>
-	<parent>
-		<groupId>de.prob</groupId>
-		<artifactId>de.prob.parent</artifactId>
-		<version>1.0.0-SNAPSHOT</version>
-		<relativePath>../de.prob.parent/pom.xml</relativePath>
-	</parent>
+	<project
+		xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+		<modelVersion>4.0.0</modelVersion>
 	
-	  <repositories>
-    <!-- configure p2 repository to resolve against -->
-    <repository>
-      <id>prob_target</id>
-      <layout>p2</layout>
-      <url>http://cobra.cs.uni-duesseldorf.de/prob_dev_target/</url>
-    </repository>
+		<parent>
+			<groupId>de.prob</groupId>
+			<artifactId>de.prob.parent</artifactId>
+			<version>1.0.0-Snapshot</version>
+			<relativePath>../de.prob.parent/pom.xml</relativePath>
+		</parent>
+	
+		  <repositories>
+    	<!-- configure p2 repository to resolve against -->
+    	<repository>
+    	  <id>prob_target</id>
+    	  <layout>p2</layout>
+    	  <url>http://cobra.cs.uni-duesseldorf.de/prob_dev_target/</url>
+    	</repository>
     
-     <repository>
-      <id>indigo</id>
-      <layout>p2</layout>
-      <url>http://download.eclipse.org/releases/indigo/</url>
-    </repository>
-  </repositories> 
+    	<repository>
+    	  	<id>indigo</id>
+    	  	<layout>p2</layout>
+      		<url>http://download.eclipse.org/releases/indigo/</url>
+    	</repository>
+  	</repositories> 
 	
-	<groupId>de.prob</groupId>
-	<artifactId>de.prob.ui</artifactId>
-	<version>1.0.0-SNAPSHOT</version>
-	<packaging>eclipse-plugin</packaging>
-</project>
-
-
-
+		<groupId>de.prob</groupId>
+		<artifactId>de.prob.ui</artifactId>
+		<version>1.0.0.qualifier</version>
+		<packaging>eclipse-plugin</packaging>
+	
+	</project>
+	

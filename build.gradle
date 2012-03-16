@@ -20,7 +20,7 @@ apply plugin: 'base'
 		<parent>
 			<groupId>de.prob</groupId>
 			<artifactId>de.prob.parent</artifactId>
-			<version>1.0.0-Snapshot</version>
+			<version>1.0.0.qualifier</version>
 			<relativePath>../de.prob.parent/pom.xml</relativePath>
 		</parent>
 	"""}
