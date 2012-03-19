@@ -1,7 +1,18 @@
 
 deploy <<{
 
-	versionNumber = '1.0.0.qualifier'
+
+	content = new File("de.prob.plugin/META-INF/MANIFEST.MF").getText("UTF-8") 
+
+	printFileLine = { if(  it ==~ /Bundle-Version.+qualifier/ ){
+			versionNumber = it.substring(16) // Moegliche Fehlerquelle
+
+		}
+	}
+	
+	content.eachLine( printFileLine )
+	
+	println versionNumber
 	artifactId = 'de.prob.plugin'
 	
 	println artifactId

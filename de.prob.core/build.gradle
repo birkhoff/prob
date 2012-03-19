@@ -1,7 +1,19 @@
+apply plugin: 'base'
 
 deploy <<{
 
-	versionNumber = '1.0.0.qualifier'
+	
+	content = new File("de.prob.core/META-INF/MANIFEST.MF").getText("UTF-8") 
+
+	printFileLine = { if(  it ==~ /Bundle-Version.+qualifier/ ){
+			versionNumber = it.substring(16) // Moegliche Fehlerquelle
+
+		}
+	}
+	
+	content.eachLine( printFileLine )
+	
+	println versionNumber
 	artifactId = 'de.prob.core'
 	
 	println artifactId
@@ -10,4 +22,18 @@ deploy <<{
 	f.delete()
 	f << start()+elder()+repos()+artifact(artifactId, versionNumber)+end()
 	
+}
+
+
+task printMF <<{
+	
+	content = new File("/Users/Mike/Uni/ProB/GitHub/BendispostoTycho/prob2/de.prob.core/META-INF/MANIFEST.MF").getText("UTF-8") 
+
+	printFileLine = { if(  it ==~ /Bundle-Version.+qualifier/ ){
+			println it
+			println it.substring(16) // Moegliche Fehlerquelle
+		}
+	}
+
+	content.eachLine( printFileLine )
 }
