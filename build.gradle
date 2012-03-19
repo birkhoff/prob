@@ -54,7 +54,7 @@ subprojects {
 
 task deploy(dependsOn: subprojects.deploy)
 
-task install( type:Exec) {
+task install(dependsOn: deploy , type:Exec) {
 
 	commandLine 'mvn', 'install', '-f', 'de.prob.parent/pom.xml'
 
