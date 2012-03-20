@@ -4,7 +4,13 @@ deploy <<{
 	content = new File("de.prob.ui/META-INF/MANIFEST.MF").getText("UTF-8") 
 
 	printFileLine = { if(  it ==~ /Bundle-Version.+qualifier/ ){
-			versionNumber = it.substring(16) // Moegliche Fehlerquelle
+			versionNumber = it.substring(16) // possibile error: cuts off first 16 chars 
+			
+			/*	Version Number is taken from Bundle-Version in Manifest.MF
+			*	If there is no Bundle-Version or the versionnumber needs to
+			*	be taken from a different key word, please change the
+			*	regular expression and the substring above
+			*/
 
 		}
 	}

@@ -1,5 +1,8 @@
 apply plugin: 'base'
 
+//---     Defining Tycho POM parts			--//
+
+
     def artifact(artifactId,versionNumber) { """
 		<groupId>de.prob</groupId>
 		<artifactId>${artifactId}</artifactId>
@@ -53,18 +56,31 @@ subprojects {
 	apply plugin: 'base'
 	
 	task deploy(){
-		versionNumber = 'Version Number Error check Manifest for Bundle-Version Number'
+		description = "\tGenerating the Tycho Poms"
 
+		versionNumber = 'Version Number Error: check Manifest for Bundle-Version Number'
+		/* -- In case of changed Manifest File in Eclipse:
+		*	
+		*	Version Numbers of the projects are collected via 
+		*	regular expressions in the Manifest.MF File.  
+		*	Versionnumber of the projects are equal to their
+		*	Bundle-Version Number
+		*/
 	}
 }
 
 task deploy(dependsOn: subprojects.deploy)
 
 task install(dependsOn: deploy , type:Exec) {
+	description = "\tExecutes a 'mvn install' of the parent pom.xml and auto-generates Tycho Poms"	
 
 	commandLine 'mvn', 'install', '-f', 'de.prob.parent/pom.xml'
 
 		
 }
+
+
+//	Build Script can be executed via gradle install
+//	Pom Generation can be executed via gradle deploy
 
 
