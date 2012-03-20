@@ -17,10 +17,11 @@ deploy <<{
 	
 	content.eachLine( printFileLine )
 	
-	println versionNumber
+	
 	artifactId = 'de.bmotionstudio.rodin'
 	
 	println artifactId
+	println "\t"+versionNumber
 
 	def f = new File(artifactId+'/pom.xml') 
 	f.delete()

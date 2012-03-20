@@ -53,7 +53,9 @@
 		<module>../de.prob.ui</module>
 		<module>../de.prob.plugin</module>
 		<module>../de.prob.feature</module>
+		<module>../de.prob2.feature</module>
 		<module>../de.prob.repository</module>
+		
 	</modules>
 </project>
 	"""}

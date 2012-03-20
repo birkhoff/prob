@@ -18,11 +18,11 @@ deploy <<{
 	
 	content.eachLine( printFileLine )
 	
-	println versionNumber
 	artifactId = 'de.prob.plugin'
 	
 	println artifactId
-
+	println "\t"+versionNumber
+	
 	def f = new File(artifactId+'/pom.xml') 
 	f.delete()
 	f << start()+elder()+repos()+artifact(artifactId, versionNumber)+end()
